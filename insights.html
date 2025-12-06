@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Insights - Philadelphia Council Districts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="insights.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="insights-sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-chart-bar"></i> Insights</h2>
+        </div>
+
+        <!-- Home Button -->
+        <div class="home-section">
+            <button class="home-btn" id="home-button">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <p class="home-note">
+                Return to main dashboard
+            </p>
+        </div>
+
+        <!-- Insight Buttons -->
+        <div class="insights-buttons-section">
+            <h3><i class="fas fa-chart-line"></i> Data Categories</h3>
+            <div class="insight-buttons">
+                <button class="insight-btn" data-section="analytical">
+                    <div class="btn-3d">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analytical Indicators</span>
+                    </div>
+                    <div class="btn-status">
+                        <i class="fas fa-power-off off"></i>
+                    </div>
+                </button>
+                
+                <button class="insight-btn" data-section="capital">
+                    <div class="btn-3d">
+                        <i class="fas fa-building"></i>
+                        <span>Capital Investments</span>
+                    </div>
+                    <div class="btn-status">
+                        <i class="fas fa-power-off off"></i>
+                    </div>
+                </button>
+                
+                <button class="insight-btn" data-section="demographics">
+                    <div class="btn-3d">
+                        <i class="fas fa-users"></i>
+                        <span>District Demographics</span>
+                    </div>
+                    <div class="btn-status">
+                        <i class="fas fa-power-off off"></i>
+                    </div>
+                </button>
+                
+                <button class="insight-btn" data-section="economic">
+                    <div class="btn-3d">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Economic Context</span>
+                    </div>
+                    <div class="btn-status">
+                        <i class="fas fa-power-off off"></i>
+                    </div>
+                </button>
+                
+                <button class="insight-btn" data-section="amenities">
+                    <div class="btn-3d">
+                        <i class="fas fa-parking"></i>
+                        <span>Public Amenities</span>
+                    </div>
+                    <div class="btn-status">
+                        <i class="fas fa-power-off off"></i>
+                    </div>
+                </button>
+                
+                <button class="insight-btn" data-section="facilities">
+                    <div class="btn-3d">
+                        <i class="fas fa-school"></i>
+                        <span>School Facilities</span>
+                    </div>
+                    <div class="btn-status">
+                        <i class="fas fa-power-off off"></i>
+                    </div>
+                </button>
+                
+                <button class="insight-btn" data-section="status">
+                    <div class="btn-3d">
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>School Status</span>
+                    </div>
+                    <div class="btn-status">
+                        <i class="fas fa-power-off off"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Status Section -->
+        <div class="insights-status-section">
+            <h3><i class="fas fa-info-circle"></i> Status</h3>
+            <div class="status-info">
+                <div class="status-item">
+                    <i class="fas fa-database"></i>
+                    <span>Data Status: <span id="data-status">Not Loaded</span></span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-toggle-on"></i>
+                    <span>Active Sections: <span id="active-sections">0/7</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="insights-main">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="welcome-screen active">
+            <div class="welcome-content">
+                <h1 class="insights-title">INSIGHTS</h1>
+                <p class="insights-subtitle">Data Visualization & Analysis Dashboard</p>
+                <div class="instructions">
+                    <div class="instruction-item">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <p>Click on any data category button to generate insights</p>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-database"></i>
+                        <p>Data from the main dashboard will be used for analysis</p>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <p>Visualize trends, patterns, and statistics</p>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-home"></i>
+                        <p>Use the Home button to return to the main dashboard</p>
+                    </div>
+                </div>
+                <div class="data-status-indicator">
+                    <i class="fas fa-circle" id="data-status-indicator"></i>
+                    <span id="data-status-text">Waiting for data import...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Content Area -->
+        <div id="analytics-content" class="analytics-content">
+            <!-- Content will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <script src="insights.js"></script>
+</body>
+</html>
